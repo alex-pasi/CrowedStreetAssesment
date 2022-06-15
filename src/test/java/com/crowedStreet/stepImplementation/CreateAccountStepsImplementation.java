@@ -72,6 +72,6 @@ public class CreateAccountStepsImplementation {
     public void accountIsSuccessfullyCreatedAndLoggedInUserIsOnTheMarketplacePage() {
         String expectedTitle = "Marketplace | CrowdStreet";
         Utils.verifyTitle(expectedTitle);
-        Assert.assertTrue(homePage.userButton.getAttribute("innerText").contains(firstName.toUpperCase()));
+        Assert.assertEquals(firstName.toUpperCase(), homePage.userButton.getAttribute("innerText").substring(3));
     }
 }
