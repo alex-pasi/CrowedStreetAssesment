@@ -36,7 +36,7 @@ public class CreateAccountStepsImplementation {
         firstName = faker.name().firstName();
         String lastName = faker.name().lastName();
         String email = firstName+"."+lastName+"@gmail.com";
-        String password = faker.bothify("##???*Ws");
+        String password = faker.regexify("[a-z]{5}[A-Z]{1}\\d[!#@$%^&*]{1}");
 
         createAccountPage.firstNameInput.sendKeys(firstName);
         createAccountPage.lastNameInput.sendKeys(lastName);

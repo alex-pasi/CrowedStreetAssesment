@@ -1,15 +1,9 @@
 package com.crowedStreet.pages;
 
-import com.crowedStreet.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class CreateAccountPage {
-
-    public CreateAccountPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class CreateAccountPage extends BasePage {
 
     @FindBy(id = "firstName")
     public WebElement firstNameInput;

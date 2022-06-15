@@ -1,15 +1,9 @@
 package com.crowedStreet.pages;
 
-import com.crowedStreet.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
-
-    public HomePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class HomePage extends BasePage {
 
     @FindBy(xpath = "//div[@class='css-108j06w']/a[.='Create An Account']")
     public WebElement createAnAccountButton;
